@@ -54,16 +54,7 @@ int main(int argc, char* argv[])
   // vertex shader
   std::ifstream vertShaderFile;
   vertShaderFile.open(SHADER_PATH"quad.vert");
-  std::string vertShaderCode;
-  if(vertShaderFile.is_open()) {
-    while(vertShaderFile) {
-      std::getline(vertShaderFile, vertShaderCode);
-    }
-  }
-  else {
-    std::cout << "Couldn't open file\n";
-  }
-  std::cout << vertShaderCode << std::endl;
+  std::string vertShaderCode{std::istreambuf_iterator<char>(vertShaderFile), std::istreambuf_iterator<char>()};
   const char *vertShaderCode_c_str = vertShaderCode.c_str();
   unsigned int vertexShader = glCreateShader(GL_VERTEX_SHADER);
   glShaderSource(vertexShader, 1, &vertShaderCode_c_str, NULL);
@@ -80,16 +71,7 @@ int main(int argc, char* argv[])
   // fragment shader
   std::ifstream fragShaderFile;
   fragShaderFile.open(SHADER_PATH"quad.frag");
-  std::string fragShaderCode;
-  if(fragShaderFile.is_open()) {
-    while(fragShaderFile) {
-      std::getline(fragShaderFile, fragShaderCode);
-    }
-  }
-  else {
-    std::cout << "Couldn't open file\n";
-  }
-  std::cout << fragShaderCode << std::endl;
+  std::string fragShaderCode{std::istreambuf_iterator<char>(fragShaderFile), std::istreambuf_iterator<char>()};
   const char *fragShaderCode_c_str = fragShaderCode.c_str();
 
   unsigned int fragmentShader = glCreateShader(GL_FRAGMENT_SHADER);
