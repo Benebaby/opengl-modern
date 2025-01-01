@@ -14,7 +14,7 @@ const unsigned int SCR_HEIGHT = 900;
 const char* glsl_version = "#version 410";
 bool show_demo_window = true;
 bool show_another_window = false;
-const ImVec4 clear_color = ImVec4(0.45f, 0.55f, 0.60f, 1.00f);
+ImVec4 clear_color = ImVec4(0.45f, 0.55f, 0.60f, 1.00f);
 
 // process all input: query GLFW whether relevant keys are pressed/released this frame and react accordingly
 // ---------------------------------------------------------------------------------------------------------
