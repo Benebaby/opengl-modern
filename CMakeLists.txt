@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.10...3.30)
+cmake_minimum_required(VERSION 3.7...3.30)
 project(OPENGL VERSION 1.0.0)
 
 add_definitions(-D_CRT_SECURE_NO_WARNINGS)
