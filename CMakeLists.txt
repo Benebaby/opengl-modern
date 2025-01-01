@@ -19,6 +19,7 @@ file(GLOB SOURCES
   src/*.h
   src/*.cpp
   lib/glad/src/*.c
+  lib/imgui/src/*.cpp
 )
 add_executable(${CMAKE_PROJECT_NAME} ${SOURCES})
 
@@ -50,6 +51,8 @@ target_link_libraries(${CMAKE_PROJECT_NAME}
 include_directories(${CMAKE_PROJECT_NAME} PRIVATE
   ${OPENGL_INCLUDE_DIRS}
   ${PROJECT_SOURCE_DIR}/lib/glad/include
+  ${PROJECT_SOURCE_DIR}/lib/imgui/include
+  ${PROJECT_SOURCE_DIR}/lib/imgui/include/backends
   ${PROJECT_SOURCE_DIR}/lib/tinygltf
   ${PROJECT_SOURCE_DIR}/src
 )
