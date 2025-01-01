@@ -2,6 +2,7 @@
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
 
+// forward defined function signatures can be moved to header file
 void framebuffer_size_callback(GLFWwindow* window, int width, int height);
 void processInput(GLFWwindow *window);
 
@@ -9,6 +10,7 @@ void processInput(GLFWwindow *window);
 const unsigned int SCR_WIDTH = 800;
 const unsigned int SCR_HEIGHT = 600;
 
+// Shader code can be written in seperate files
 const char *vertexShaderSource = "#version 330 core\n"
   "layout (location = 0) in vec3 aPos;\n"
   "void main()\n"
@@ -26,6 +28,7 @@ int main(int argc, char* argv[])
 {
   GLFWwindow *window;
 
+  //init glfw and set context to latest macos opengl version (OpenGL 4.1)
   if(!glfwInit())
   {
     std::cout << "GLFW Not Initialized" << std::endl;
@@ -38,18 +41,17 @@ int main(int argc, char* argv[])
   #endif
   glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 
+  // create glfw window and set as active context
   window = glfwCreateWindow(SCR_WIDTH, SCR_HEIGHT, "OpenGL Tutorial", 0, 0);
-
   if(!window)
   {
     std::cout << "Window wasn't created" << std::endl;
     return -1;
   }
-
   glfwMakeContextCurrent(window);
   glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
 
-  //init glad function loader
+  //init glad function loader to get all opengl core/extension functions
   if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress))
   {
     std::cout << "Failed to initialize GLAD" << std::endl;
