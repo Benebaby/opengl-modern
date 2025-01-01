@@ -1,16 +1,70 @@
 #include <iostream>
 #include <fstream>
 #include <string>
+#include <vector>
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
-
-// forward defined function signatures can be moved to header file
-void framebuffer_size_callback(GLFWwindow* window, int width, int height);
-void input_callback(GLFWwindow *window);
 
 // settings
 const unsigned int SCR_WIDTH = 800;
 const unsigned int SCR_HEIGHT = 600;
+
+// process all input: query GLFW whether relevant keys are pressed/released this frame and react accordingly
+// ---------------------------------------------------------------------------------------------------------
+void input_callback(GLFWwindow *window)
+{
+  if (glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS)
+    glfwSetWindowShouldClose(window, true);
+}
+
+// glfw: whenever the window size changed (by OS or user resize) this callback function executes
+// ---------------------------------------------------------------------------------------------
+void framebuffer_size_callback(GLFWwindow* window, int width, int height)
+{
+  // make sure the viewport matches the new window dimensions; note that width and 
+  // height will be significantly larger than specified on retina displays.
+  glViewport(0, 0, width, height);
+}
+
+unsigned int createShader(std::string fileName, unsigned int shaderType) {
+  // vertex shader
+  std::ifstream shaderFile;
+  shaderFile.open(SHADER_PATH+fileName);
+  std::string shaderCode{std::istreambuf_iterator<char>(shaderFile), std::istreambuf_iterator<char>()};
+  const char *shaderCode_c_str = shaderCode.c_str();
+  unsigned int shader = glCreateShader(shaderType);
+  glShaderSource(shader, 1, &shaderCode_c_str, NULL);
+  glCompileShader(shader);
+  // check for shader compile errors
+  int success;
+  char infoLog[512];
+  glGetShaderiv(shader, GL_COMPILE_STATUS, &success);
+  if (!success)
+  {
+      glGetShaderInfoLog(shader, 512, NULL, infoLog);
+      std::cout << "ERROR::SHADER::VERTEX::COMPILATION_FAILED\n" << infoLog << std::endl;
+  }
+  return shader;
+}
+
+unsigned int createShaderProgram(std::vector<unsigned int> shaders) {
+  unsigned int shaderProgram = glCreateProgram();
+  for (auto& shader : shaders) {
+    glAttachShader(shaderProgram, shader);
+  }
+  glLinkProgram(shaderProgram);
+  // check for linking errors
+  int success;
+  char infoLog[512];
+  glGetProgramiv(shaderProgram, GL_LINK_STATUS, &success);
+  if (!success) {
+    glGetProgramInfoLog(shaderProgram, 512, NULL, infoLog);
+    std::cout << "ERROR::SHADER::PROGRAM::LINKING_FAILED\n" << infoLog << std::endl;
+  }
+  return shaderProgram;
+}
+
+
 
 int main(int argc, char* argv[])
 {
@@ -52,63 +106,27 @@ int main(int argc, char* argv[])
   // build and compile our shader program
   // ------------------------------------
   // vertex shader
-  std::ifstream vertShaderFile;
-  vertShaderFile.open(SHADER_PATH"quad.vert");
-  std::string vertShaderCode{std::istreambuf_iterator<char>(vertShaderFile), std::istreambuf_iterator<char>()};
-  const char *vertShaderCode_c_str = vertShaderCode.c_str();
-  unsigned int vertexShader = glCreateShader(GL_VERTEX_SHADER);
-  glShaderSource(vertexShader, 1, &vertShaderCode_c_str, NULL);
-  glCompileShader(vertexShader);
-  // check for shader compile errors
-  int success;
-  char infoLog[512];
-  glGetShaderiv(vertexShader, GL_COMPILE_STATUS, &success);
-  if (!success)
-  {
-      glGetShaderInfoLog(vertexShader, 512, NULL, infoLog);
-      std::cout << "ERROR::SHADER::VERTEX::COMPILATION_FAILED\n" << infoLog << std::endl;
-  }
+  unsigned int vertexShader = createShader("quad.vert", GL_VERTEX_SHADER);
   // fragment shader
-  std::ifstream fragShaderFile;
-  fragShaderFile.open(SHADER_PATH"quad.frag");
-  std::string fragShaderCode{std::istreambuf_iterator<char>(fragShaderFile), std::istreambuf_iterator<char>()};
-  const char *fragShaderCode_c_str = fragShaderCode.c_str();
-
-  unsigned int fragmentShader = glCreateShader(GL_FRAGMENT_SHADER);
-  glShaderSource(fragmentShader, 1, &fragShaderCode_c_str, NULL);
-  glCompileShader(fragmentShader);
-  // check for shader compile errors
-  glGetShaderiv(fragmentShader, GL_COMPILE_STATUS, &success);
-  if (!success)
-  {
-      glGetShaderInfoLog(fragmentShader, 512, NULL, infoLog);
-      std::cout << "ERROR::SHADER::FRAGMENT::COMPILATION_FAILED\n" << infoLog << std::endl;
-  }
+  unsigned int fragmentShader = createShader("quad.frag", GL_FRAGMENT_SHADER);
   // link shaders
-  unsigned int shaderProgram = glCreateProgram();
-  glAttachShader(shaderProgram, vertexShader);
-  glAttachShader(shaderProgram, fragmentShader);
-  glLinkProgram(shaderProgram);
-  // check for linking errors
-  glGetProgramiv(shaderProgram, GL_LINK_STATUS, &success);
-  if (!success) {
-      glGetProgramInfoLog(shaderProgram, 512, NULL, infoLog);
-      std::cout << "ERROR::SHADER::PROGRAM::LINKING_FAILED\n" << infoLog << std::endl;
-  }
+  unsigned int shaderProgram = createShaderProgram({vertexShader, fragmentShader});
+
+  //delete temporary shaders
   glDeleteShader(vertexShader);
   glDeleteShader(fragmentShader);
 
   // set up vertex data (and buffer(s)) and configure vertex attributes
   // ------------------------------------------------------------------
   float vertices[] = {
-        0.5f,  0.5f, 0.0f,  // top right
-        0.5f, -0.5f, 0.0f,  // bottom right
-      -0.5f, -0.5f, 0.0f,  // bottom left
-      -0.5f,  0.5f, 0.0f   // top left 
+      0.5f,  0.5f, 0.0f,  // top right
+      0.5f, -0.5f, 0.0f,  // bottom right
+    -0.5f, -0.5f, 0.0f,  // bottom left
+    -0.5f,  0.5f, 0.0f   // top left 
   };
   unsigned int indices[] = {  // note that we start from 0!
-      0, 1, 3,  // first Triangle
-      1, 2, 3   // second Triangle
+    0, 1, 3,  // first Triangle
+    1, 2, 3   // second Triangle
   };
   unsigned int VBO, VAO, EBO;
   glGenVertexArrays(1, &VAO);
@@ -144,26 +162,26 @@ int main(int argc, char* argv[])
   // -----------
   while (!glfwWindowShouldClose(window))
   {
-      // input
-      // -----
-      input_callback(window);
+    // input
+    // -----
+    input_callback(window);
 
-      // render
-      // ------
-      glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
-      glClear(GL_COLOR_BUFFER_BIT);
+    // render
+    // ------
+    glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
+    glClear(GL_COLOR_BUFFER_BIT);
 
-      // draw our first triangle
-      glUseProgram(shaderProgram);
-      glBindVertexArray(VAO); // seeing as we only have a single VAO there's no need to bind it every time, but we'll do so to keep things a bit more organized
-      //glDrawArrays(GL_TRIANGLES, 0, 6);
-      glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
-      // glBindVertexArray(0); // no need to unbind it every time 
+    // draw our first triangle
+    glUseProgram(shaderProgram);
+    glBindVertexArray(VAO); // seeing as we only have a single VAO there's no need to bind it every time, but we'll do so to keep things a bit more organized
+    //glDrawArrays(GL_TRIANGLES, 0, 6);
+    glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
+    // glBindVertexArray(0); // no need to unbind it every time 
 
-      // glfw: swap buffers and poll IO events (keys pressed/released, mouse moved etc.)
-      // -------------------------------------------------------------------------------
-      glfwSwapBuffers(window);
-      glfwPollEvents();
+    // glfw: swap buffers and poll IO events (keys pressed/released, mouse moved etc.)
+    // -------------------------------------------------------------------------------
+    glfwSwapBuffers(window);
+    glfwPollEvents();
   }
 
   // optional: de-allocate all resources once they've outlived their purpose:
@@ -177,21 +195,4 @@ int main(int argc, char* argv[])
   // ------------------------------------------------------------------
   glfwTerminate();
   return 0;
-}
-
-// process all input: query GLFW whether relevant keys are pressed/released this frame and react accordingly
-// ---------------------------------------------------------------------------------------------------------
-void input_callback(GLFWwindow *window)
-{
-  if (glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS)
-    glfwSetWindowShouldClose(window, true);
-}
-
-// glfw: whenever the window size changed (by OS or user resize) this callback function executes
-// ---------------------------------------------------------------------------------------------
-void framebuffer_size_callback(GLFWwindow* window, int width, int height)
-{
-  // make sure the viewport matches the new window dimensions; note that width and 
-  // height will be significantly larger than specified on retina displays.
-  glViewport(0, 0, width, height);
 }
