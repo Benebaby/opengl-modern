@@ -65,7 +65,6 @@ unsigned int createShaderProgram(std::vector<unsigned int> shaders) {
 }
 
 
-
 int main(int argc, char* argv[])
 {
   GLFWwindow *window;
