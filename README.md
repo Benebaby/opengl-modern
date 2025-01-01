@@ -7,4 +7,4 @@
 #### install c++ compiler of yout choice 
 #### configure and build with cmake-tools
 
-### alternative every cmake compatible ide can be used
+#### alternatively every cmake compatible ide can be used
