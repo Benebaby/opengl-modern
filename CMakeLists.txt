@@ -7,7 +7,7 @@ IF(APPLE)
   add_definitions(-Wno-deprecated)
 ENDIF()
 
-add_compile_definitions(SHADER_PATH="${PROJECT_SOURCE_DIR}/shader" ASSET_PATH="${PROJECT_SOURCE_DIR}/assets")
+add_compile_definitions(SHADER_PATH="${PROJECT_SOURCE_DIR}/shader/" ASSET_PATH="${PROJECT_SOURCE_DIR}/assets/")
 
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)

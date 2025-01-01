@@ -1,28 +1,16 @@
 #include <iostream>
+#include <fstream>
+#include <string>
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
 
 // forward defined function signatures can be moved to header file
 void framebuffer_size_callback(GLFWwindow* window, int width, int height);
-void processInput(GLFWwindow *window);
+void input_callback(GLFWwindow *window);
 
 // settings
 const unsigned int SCR_WIDTH = 800;
 const unsigned int SCR_HEIGHT = 600;
-
-// Shader code can be written in seperate files
-const char *vertexShaderSource = "#version 330 core\n"
-  "layout (location = 0) in vec3 aPos;\n"
-  "void main()\n"
-  "{\n"
-  "   gl_Position = vec4(aPos.x, aPos.y, aPos.z, 1.0);\n"
-  "}\0";
-const char *fragmentShaderSource = "#version 330 core\n"
-  "out vec4 FragColor;\n"
-  "void main()\n"
-  "{\n"
-  "   FragColor = vec4(1.0f, 0.5f, 0.2f, 1.0f);\n"
-  "}\n\0";
 
 int main(int argc, char* argv[])
 {
@@ -64,8 +52,20 @@ int main(int argc, char* argv[])
   // build and compile our shader program
   // ------------------------------------
   // vertex shader
+  std::ifstream vertShaderFile;
+  vertShaderFile.open(SHADER_PATH"quad.vert");
+  std::string vertShaderCode;
+  if(vertShaderFile.is_open()) {
+    while(vertShaderFile) {
+      std::getline(vertShaderFile, vertShaderCode);
+    }
+  }
+  else {
+    std::cout << "Couldn't open file\n";
+  }
+  const char *vertShaderCode_c_str = vertShaderCode.c_str();
   unsigned int vertexShader = glCreateShader(GL_VERTEX_SHADER);
-  glShaderSource(vertexShader, 1, &vertexShaderSource, NULL);
+  glShaderSource(vertexShader, 1, &vertShaderCode_c_str, NULL);
   glCompileShader(vertexShader);
   // check for shader compile errors
   int success;
@@ -77,8 +77,21 @@ int main(int argc, char* argv[])
       std::cout << "ERROR::SHADER::VERTEX::COMPILATION_FAILED\n" << infoLog << std::endl;
   }
   // fragment shader
+  std::ifstream fragShaderFile;
+  fragShaderFile.open(SHADER_PATH"quad.vert");
+  std::string fragShaderCode;
+  if(fragShaderFile.is_open()) {
+    while(fragShaderFile) {
+      std::getline(fragShaderFile, fragShaderCode);
+    }
+  }
+  else {
+    std::cout << "Couldn't open file\n";
+  }
+  const char *fragShaderCode_c_str = fragShaderCode.c_str();
+
   unsigned int fragmentShader = glCreateShader(GL_FRAGMENT_SHADER);
-  glShaderSource(fragmentShader, 1, &fragmentShaderSource, NULL);
+  glShaderSource(fragmentShader, 1, &fragShaderCode_c_str, NULL);
   glCompileShader(fragmentShader);
   // check for shader compile errors
   glGetShaderiv(fragmentShader, GL_COMPILE_STATUS, &success);
@@ -149,7 +162,7 @@ int main(int argc, char* argv[])
   {
       // input
       // -----
-      processInput(window);
+      input_callback(window);
 
       // render
       // ------
@@ -184,7 +197,7 @@ int main(int argc, char* argv[])
 
 // process all input: query GLFW whether relevant keys are pressed/released this frame and react accordingly
 // ---------------------------------------------------------------------------------------------------------
-void processInput(GLFWwindow *window)
+void input_callback(GLFWwindow *window)
 {
   if (glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS)
     glfwSetWindowShouldClose(window, true);
