@@ -4,7 +4,6 @@
 
 int main(int argc, char* argv[])
 {
-  std::cout << "Hello World" << std::endl;
   GLFWwindow *window;
 
   if(!glfwInit())
@@ -12,6 +11,10 @@ int main(int argc, char* argv[])
     std::cout << "GLFW Not Initialized" << std::endl;
     return -1;
   }
+  glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 4);
+  glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 1);
+  glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
+  glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 
   window = glfwCreateWindow(1600, 900, "OpenGL Tutorial", 0, 0);
 
@@ -22,12 +25,12 @@ int main(int argc, char* argv[])
   }
 
   glfwMakeContextCurrent(window);
-
   if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress))
   {
       std::cout << "Failed to initialize GLAD" << std::endl;
       return -1;
   }
+  std::cout << "OPENGL Version" << glGetString(GL_VERSION) << std::endl;
 
   while(!glfwWindowShouldClose(window))
   {
