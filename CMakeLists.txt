@@ -7,6 +7,7 @@ IF(APPLE)
   add_definitions(-Wno-deprecated)
 ENDIF()
 
+#add Path definitions
 add_compile_definitions(SHADER_PATH="${PROJECT_SOURCE_DIR}/shader/" ASSET_PATH="${PROJECT_SOURCE_DIR}/assets/")
 
 set(CMAKE_CXX_STANDARD 20)
@@ -17,8 +18,11 @@ ENDIF()
 
 file(GLOB SOURCES
   src/*.h
+  src/*.hpp
+  src/*.c
   src/*.cpp
   lib/glad/src/*.c
+  lib/glad/src/*.cpp
 )
 add_executable(${CMAKE_PROJECT_NAME} ${SOURCES})
 
