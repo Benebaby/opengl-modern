@@ -18,6 +18,7 @@ ENDIF()
 file(GLOB SOURCES
   src/*.h
   src/*.cpp
+  lib/glad/src/*.c
 )
 add_executable(${CMAKE_PROJECT_NAME} ${SOURCES})
 
@@ -43,12 +44,12 @@ target_link_libraries(${CMAKE_PROJECT_NAME}
   ${OPENGL_LIBRARIES}
   glm 
   glfw
-  glew
 )
 
 #include all necessary directories
 include_directories(${CMAKE_PROJECT_NAME} PRIVATE
   ${OPENGL_INCLUDE_DIRS}
+  ${PROJECT_SOURCE_DIR}/lib/glad/include
   ${PROJECT_SOURCE_DIR}/lib/tinygltf
   ${PROJECT_SOURCE_DIR}/src
 )

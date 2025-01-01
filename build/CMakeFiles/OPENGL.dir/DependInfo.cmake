@@ -8,6 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/Users/benedikt/Documents/opengl-modern/lib/glad/src/glad.c" "CMakeFiles/OPENGL.dir/lib/glad/src/glad.c.o" "gcc" "CMakeFiles/OPENGL.dir/lib/glad/src/glad.c.o.d"
   "/Users/benedikt/Documents/opengl-modern/src/main.cpp" "CMakeFiles/OPENGL.dir/src/main.cpp.o" "gcc" "CMakeFiles/OPENGL.dir/src/main.cpp.o.d"
   )
 

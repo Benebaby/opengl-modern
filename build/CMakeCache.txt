@@ -14,14 +14,8 @@
 # EXTERNAL cache entries
 ########################
 
-//Build Framework bundle for OSX
-BUILD_FRAMEWORK:BOOL=OFF
-
 //Build shared libraries
 BUILD_SHARED_LIBS:BOOL=OFF
-
-//utilities
-BUILD_UTILS:BOOL=ON
 
 //Path to a program.
 CMAKE_ADDR2LINE:FILEPATH=CMAKE_ADDR2LINE-NOTFOUND
@@ -35,8 +29,8 @@ CMAKE_BUILD_TYPE:STRING=Debug
 //Enable/Disable color output during build.
 CMAKE_COLOR_MAKEFILE:BOOL=ON
 
-//No help, variable specified on the command line.
-CMAKE_CXX_COMPILER:FILEPATH=/usr/bin/clang++
+//CXX compiler
+CMAKE_CXX_COMPILER:STRING=/usr/bin/clang++
 
 //Flags used by the CXX compiler during all build types.
 CMAKE_CXX_FLAGS:STRING=
@@ -53,8 +47,8 @@ CMAKE_CXX_FLAGS_RELEASE:STRING=-O3 -DNDEBUG
 //Flags used by the CXX compiler during RELWITHDEBINFO builds.
 CMAKE_CXX_FLAGS_RELWITHDEBINFO:STRING=-O2 -g -DNDEBUG
 
-//No help, variable specified on the command line.
-CMAKE_C_COMPILER:FILEPATH=/usr/bin/clang
+//C compiler
+CMAKE_C_COMPILER:STRING=/usr/bin/clang
 
 //Flags used by the C compiler during all build types.
 CMAKE_C_FLAGS:STRING=
@@ -303,18 +297,6 @@ CMAKE_TAPI:FILEPATH=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeD
 // Studio IDE projects all commands are done without /nologo.
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
-//EGL mode
-GLEW_EGL:BOOL=OFF
-
-//OSMesa mode
-GLEW_OSMESA:BOOL=OFF
-
-//Regal mode
-GLEW_REGAL:BOOL=OFF
-
-//X11 mode
-GLEW_X11:BOOL=ON
-
 //Value Computed by CMake
 GLFW_BINARY_DIR:STATIC=/Users/benedikt/Documents/opengl-modern/build/lib/glfw
 
@@ -438,15 +420,6 @@ TINYGLTF_BUILD_VALIDATOR_EXAMPLE:BOOL=OFF
 
 //Install vendored nlohmann/json and nothings/stb headers
 TINYGLTF_INSTALL_VENDOR:BOOL=ON
-
-//Value Computed by CMake
-glew_BINARY_DIR:STATIC=/Users/benedikt/Documents/opengl-modern/build/lib/glew/build/cmake
-
-//Value Computed by CMake
-glew_IS_TOP_LEVEL:STATIC=OFF
-
-//Value Computed by CMake
-glew_SOURCE_DIR:STATIC=/Users/benedikt/Documents/opengl-modern/lib/glew/build/cmake
 
 //Value Computed by CMake
 glm_BINARY_DIR:STATIC=/Users/benedikt/Documents/opengl-modern/build/lib/glm
