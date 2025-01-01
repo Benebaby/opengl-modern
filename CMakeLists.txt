@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.7)
+cmake_minimum_required(VERSION 3.10...3.30)
 project(OPENGL VERSION 1.0.0)
 
 add_definitions(-D_CRT_SECURE_NO_WARNINGS)
@@ -23,7 +23,6 @@ add_executable(${CMAKE_PROJECT_NAME} ${SOURCES})
 
 #add OpenGL and GLUT
 find_package(OpenGL REQUIRED)
-find_package(GLUT REQUIRED)
 
 #add glfw
 set(GLFW_BUILD_DOCS OFF CACHE BOOL "" FORCE)
@@ -41,16 +40,15 @@ add_subdirectory(${PROJECT_SOURCE_DIR}/lib/tinygltf)
 
 #link all libararies
 target_link_libraries(${CMAKE_PROJECT_NAME} 
-  ${OPENGL_LIBRARIES} 
-  ${GLUT_LIBRARY}
+  ${OPENGL_LIBRARIES}
   glm 
   glfw
+  glew
 )
 
 #include all necessary directories
 include_directories(${CMAKE_PROJECT_NAME} PRIVATE
-  ${OPENGL_INCLUDE_DIRS}  
-  ${GLUT_INCLUDE_DIRS}
+  ${OPENGL_INCLUDE_DIRS}
   ${PROJECT_SOURCE_DIR}/lib/tinygltf
   ${PROJECT_SOURCE_DIR}/src
 )

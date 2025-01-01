@@ -1,0 +1,146 @@
+[
+{
+  "directory": "/Users/benedikt/Documents/opengl-modern/build",
+  "command": "/usr/bin/clang++ -DASSET_PATH=\\\"/Users/benedikt/Documents/opengl-modern/assets\\\" -DSHADER_PATH=\\\"/Users/benedikt/Documents/opengl-modern/shader\\\" -D_CRT_SECURE_NO_WARNINGS -I/Users/benedikt/Documents/opengl-modern/OPENGL -I/Users/benedikt/Documents/opengl-modern/PRIVATE -F/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/System/Library/Frameworks -I/Users/benedikt/Documents/opengl-modern/lib/tinygltf -I/Users/benedikt/Documents/opengl-modern/src -I/Users/benedikt/Documents/opengl-modern/lib/glm -I/Users/benedikt/Documents/opengl-modern/lib/glfw/include -g -std=gnu++20 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk   -Wno-nullability-completeness -Wno-deprecated -o CMakeFiles/OPENGL.dir/src/main.cpp.o -c /Users/benedikt/Documents/opengl-modern/src/main.cpp",
+  "file": "/Users/benedikt/Documents/opengl-modern/src/main.cpp",
+  "output": "CMakeFiles/OPENGL.dir/src/main.cpp.o"
+},
+{
+  "directory": "/Users/benedikt/Documents/opengl-modern/build/lib/glfw/src",
+  "command": "/usr/bin/clang -DASSET_PATH=\\\"/Users/benedikt/Documents/opengl-modern/assets\\\" -DSHADER_PATH=\\\"/Users/benedikt/Documents/opengl-modern/shader\\\" -D_CRT_SECURE_NO_WARNINGS -D_GLFW_COCOA -I/Users/benedikt/Documents/opengl-modern/lib/glfw/include -I/Users/benedikt/Documents/opengl-modern/lib/glfw/src -I/Users/benedikt/Documents/opengl-modern/build/lib/glfw/src -g -std=c99 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk -fPIC   -Wno-nullability-completeness -Wno-deprecated -Wall -o CMakeFiles/glfw.dir/context.c.o -c /Users/benedikt/Documents/opengl-modern/lib/glfw/src/context.c",
+  "file": "/Users/benedikt/Documents/opengl-modern/lib/glfw/src/context.c",
+  "output": "lib/glfw/src/CMakeFiles/glfw.dir/context.c.o"
+},
+{
+  "directory": "/Users/benedikt/Documents/opengl-modern/build/lib/glfw/src",
+  "command": "/usr/bin/clang -DASSET_PATH=\\\"/Users/benedikt/Documents/opengl-modern/assets\\\" -DSHADER_PATH=\\\"/Users/benedikt/Documents/opengl-modern/shader\\\" -D_CRT_SECURE_NO_WARNINGS -D_GLFW_COCOA -I/Users/benedikt/Documents/opengl-modern/lib/glfw/include -I/Users/benedikt/Documents/opengl-modern/lib/glfw/src -I/Users/benedikt/Documents/opengl-modern/build/lib/glfw/src -g -std=c99 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk -fPIC   -Wno-nullability-completeness -Wno-deprecated -Wall -o CMakeFiles/glfw.dir/init.c.o -c /Users/benedikt/Documents/opengl-modern/lib/glfw/src/init.c",
+  "file": "/Users/benedikt/Documents/opengl-modern/lib/glfw/src/init.c",
+  "output": "lib/glfw/src/CMakeFiles/glfw.dir/init.c.o"
+},
+{
+  "directory": "/Users/benedikt/Documents/opengl-modern/build/lib/glfw/src",
+  "command": "/usr/bin/clang -DASSET_PATH=\\\"/Users/benedikt/Documents/opengl-modern/assets\\\" -DSHADER_PATH=\\\"/Users/benedikt/Documents/opengl-modern/shader\\\" -D_CRT_SECURE_NO_WARNINGS -D_GLFW_COCOA -I/Users/benedikt/Documents/opengl-modern/lib/glfw/include -I/Users/benedikt/Documents/opengl-modern/lib/glfw/src -I/Users/benedikt/Documents/opengl-modern/build/lib/glfw/src -g -std=c99 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk -fPIC   -Wno-nullability-completeness -Wno-deprecated -Wall -o CMakeFiles/glfw.dir/input.c.o -c /Users/benedikt/Documents/opengl-modern/lib/glfw/src/input.c",
+  "file": "/Users/benedikt/Documents/opengl-modern/lib/glfw/src/input.c",
+  "output": "lib/glfw/src/CMakeFiles/glfw.dir/input.c.o"
+},
+{
+  "directory": "/Users/benedikt/Documents/opengl-modern/build/lib/glfw/src",
+  "command": "/usr/bin/clang -DASSET_PATH=\\\"/Users/benedikt/Documents/opengl-modern/assets\\\" -DSHADER_PATH=\\\"/Users/benedikt/Documents/opengl-modern/shader\\\" -D_CRT_SECURE_NO_WARNINGS -D_GLFW_COCOA -I/Users/benedikt/Documents/opengl-modern/lib/glfw/include -I/Users/benedikt/Documents/opengl-modern/lib/glfw/src -I/Users/benedikt/Documents/opengl-modern/build/lib/glfw/src -g -std=c99 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk -fPIC   -Wno-nullability-completeness -Wno-deprecated -Wall -o CMakeFiles/glfw.dir/monitor.c.o -c /Users/benedikt/Documents/opengl-modern/lib/glfw/src/monitor.c",
+  "file": "/Users/benedikt/Documents/opengl-modern/lib/glfw/src/monitor.c",
+  "output": "lib/glfw/src/CMakeFiles/glfw.dir/monitor.c.o"
+},
+{
+  "directory": "/Users/benedikt/Documents/opengl-modern/build/lib/glfw/src",
+  "command": "/usr/bin/clang -DASSET_PATH=\\\"/Users/benedikt/Documents/opengl-modern/assets\\\" -DSHADER_PATH=\\\"/Users/benedikt/Documents/opengl-modern/shader\\\" -D_CRT_SECURE_NO_WARNINGS -D_GLFW_COCOA -I/Users/benedikt/Documents/opengl-modern/lib/glfw/include -I/Users/benedikt/Documents/opengl-modern/lib/glfw/src -I/Users/benedikt/Documents/opengl-modern/build/lib/glfw/src -g -std=c99 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk -fPIC   -Wno-nullability-completeness -Wno-deprecated -Wall -o CMakeFiles/glfw.dir/platform.c.o -c /Users/benedikt/Documents/opengl-modern/lib/glfw/src/platform.c",
+  "file": "/Users/benedikt/Documents/opengl-modern/lib/glfw/src/platform.c",
+  "output": "lib/glfw/src/CMakeFiles/glfw.dir/platform.c.o"
+},
+{
+  "directory": "/Users/benedikt/Documents/opengl-modern/build/lib/glfw/src",
+  "command": "/usr/bin/clang -DASSET_PATH=\\\"/Users/benedikt/Documents/opengl-modern/assets\\\" -DSHADER_PATH=\\\"/Users/benedikt/Documents/opengl-modern/shader\\\" -D_CRT_SECURE_NO_WARNINGS -D_GLFW_COCOA -I/Users/benedikt/Documents/opengl-modern/lib/glfw/include -I/Users/benedikt/Documents/opengl-modern/lib/glfw/src -I/Users/benedikt/Documents/opengl-modern/build/lib/glfw/src -g -std=c99 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk -fPIC   -Wno-nullability-completeness -Wno-deprecated -Wall -o CMakeFiles/glfw.dir/vulkan.c.o -c /Users/benedikt/Documents/opengl-modern/lib/glfw/src/vulkan.c",
+  "file": "/Users/benedikt/Documents/opengl-modern/lib/glfw/src/vulkan.c",
+  "output": "lib/glfw/src/CMakeFiles/glfw.dir/vulkan.c.o"
+},
+{
+  "directory": "/Users/benedikt/Documents/opengl-modern/build/lib/glfw/src",
+  "command": "/usr/bin/clang -DASSET_PATH=\\\"/Users/benedikt/Documents/opengl-modern/assets\\\" -DSHADER_PATH=\\\"/Users/benedikt/Documents/opengl-modern/shader\\\" -D_CRT_SECURE_NO_WARNINGS -D_GLFW_COCOA -I/Users/benedikt/Documents/opengl-modern/lib/glfw/include -I/Users/benedikt/Documents/opengl-modern/lib/glfw/src -I/Users/benedikt/Documents/opengl-modern/build/lib/glfw/src -g -std=c99 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk -fPIC   -Wno-nullability-completeness -Wno-deprecated -Wall -o CMakeFiles/glfw.dir/window.c.o -c /Users/benedikt/Documents/opengl-modern/lib/glfw/src/window.c",
+  "file": "/Users/benedikt/Documents/opengl-modern/lib/glfw/src/window.c",
+  "output": "lib/glfw/src/CMakeFiles/glfw.dir/window.c.o"
+},
+{
+  "directory": "/Users/benedikt/Documents/opengl-modern/build/lib/glfw/src",
+  "command": "/usr/bin/clang -DASSET_PATH=\\\"/Users/benedikt/Documents/opengl-modern/assets\\\" -DSHADER_PATH=\\\"/Users/benedikt/Documents/opengl-modern/shader\\\" -D_CRT_SECURE_NO_WARNINGS -D_GLFW_COCOA -I/Users/benedikt/Documents/opengl-modern/lib/glfw/include -I/Users/benedikt/Documents/opengl-modern/lib/glfw/src -I/Users/benedikt/Documents/opengl-modern/build/lib/glfw/src -g -std=c99 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk -fPIC   -Wno-nullability-completeness -Wno-deprecated -Wall -o CMakeFiles/glfw.dir/egl_context.c.o -c /Users/benedikt/Documents/opengl-modern/lib/glfw/src/egl_context.c",
+  "file": "/Users/benedikt/Documents/opengl-modern/lib/glfw/src/egl_context.c",
+  "output": "lib/glfw/src/CMakeFiles/glfw.dir/egl_context.c.o"
+},
+{
+  "directory": "/Users/benedikt/Documents/opengl-modern/build/lib/glfw/src",
+  "command": "/usr/bin/clang -DASSET_PATH=\\\"/Users/benedikt/Documents/opengl-modern/assets\\\" -DSHADER_PATH=\\\"/Users/benedikt/Documents/opengl-modern/shader\\\" -D_CRT_SECURE_NO_WARNINGS -D_GLFW_COCOA -I/Users/benedikt/Documents/opengl-modern/lib/glfw/include -I/Users/benedikt/Documents/opengl-modern/lib/glfw/src -I/Users/benedikt/Documents/opengl-modern/build/lib/glfw/src -g -std=c99 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk -fPIC   -Wno-nullability-completeness -Wno-deprecated -Wall -o CMakeFiles/glfw.dir/osmesa_context.c.o -c /Users/benedikt/Documents/opengl-modern/lib/glfw/src/osmesa_context.c",
+  "file": "/Users/benedikt/Documents/opengl-modern/lib/glfw/src/osmesa_context.c",
+  "output": "lib/glfw/src/CMakeFiles/glfw.dir/osmesa_context.c.o"
+},
+{
+  "directory": "/Users/benedikt/Documents/opengl-modern/build/lib/glfw/src",
+  "command": "/usr/bin/clang -DASSET_PATH=\\\"/Users/benedikt/Documents/opengl-modern/assets\\\" -DSHADER_PATH=\\\"/Users/benedikt/Documents/opengl-modern/shader\\\" -D_CRT_SECURE_NO_WARNINGS -D_GLFW_COCOA -I/Users/benedikt/Documents/opengl-modern/lib/glfw/include -I/Users/benedikt/Documents/opengl-modern/lib/glfw/src -I/Users/benedikt/Documents/opengl-modern/build/lib/glfw/src -g -std=c99 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk -fPIC   -Wno-nullability-completeness -Wno-deprecated -Wall -o CMakeFiles/glfw.dir/null_init.c.o -c /Users/benedikt/Documents/opengl-modern/lib/glfw/src/null_init.c",
+  "file": "/Users/benedikt/Documents/opengl-modern/lib/glfw/src/null_init.c",
+  "output": "lib/glfw/src/CMakeFiles/glfw.dir/null_init.c.o"
+},
+{
+  "directory": "/Users/benedikt/Documents/opengl-modern/build/lib/glfw/src",
+  "command": "/usr/bin/clang -DASSET_PATH=\\\"/Users/benedikt/Documents/opengl-modern/assets\\\" -DSHADER_PATH=\\\"/Users/benedikt/Documents/opengl-modern/shader\\\" -D_CRT_SECURE_NO_WARNINGS -D_GLFW_COCOA -I/Users/benedikt/Documents/opengl-modern/lib/glfw/include -I/Users/benedikt/Documents/opengl-modern/lib/glfw/src -I/Users/benedikt/Documents/opengl-modern/build/lib/glfw/src -g -std=c99 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk -fPIC   -Wno-nullability-completeness -Wno-deprecated -Wall -o CMakeFiles/glfw.dir/null_monitor.c.o -c /Users/benedikt/Documents/opengl-modern/lib/glfw/src/null_monitor.c",
+  "file": "/Users/benedikt/Documents/opengl-modern/lib/glfw/src/null_monitor.c",
+  "output": "lib/glfw/src/CMakeFiles/glfw.dir/null_monitor.c.o"
+},
+{
+  "directory": "/Users/benedikt/Documents/opengl-modern/build/lib/glfw/src",
+  "command": "/usr/bin/clang -DASSET_PATH=\\\"/Users/benedikt/Documents/opengl-modern/assets\\\" -DSHADER_PATH=\\\"/Users/benedikt/Documents/opengl-modern/shader\\\" -D_CRT_SECURE_NO_WARNINGS -D_GLFW_COCOA -I/Users/benedikt/Documents/opengl-modern/lib/glfw/include -I/Users/benedikt/Documents/opengl-modern/lib/glfw/src -I/Users/benedikt/Documents/opengl-modern/build/lib/glfw/src -g -std=c99 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk -fPIC   -Wno-nullability-completeness -Wno-deprecated -Wall -o CMakeFiles/glfw.dir/null_window.c.o -c /Users/benedikt/Documents/opengl-modern/lib/glfw/src/null_window.c",
+  "file": "/Users/benedikt/Documents/opengl-modern/lib/glfw/src/null_window.c",
+  "output": "lib/glfw/src/CMakeFiles/glfw.dir/null_window.c.o"
+},
+{
+  "directory": "/Users/benedikt/Documents/opengl-modern/build/lib/glfw/src",
+  "command": "/usr/bin/clang -DASSET_PATH=\\\"/Users/benedikt/Documents/opengl-modern/assets\\\" -DSHADER_PATH=\\\"/Users/benedikt/Documents/opengl-modern/shader\\\" -D_CRT_SECURE_NO_WARNINGS -D_GLFW_COCOA -I/Users/benedikt/Documents/opengl-modern/lib/glfw/include -I/Users/benedikt/Documents/opengl-modern/lib/glfw/src -I/Users/benedikt/Documents/opengl-modern/build/lib/glfw/src -g -std=c99 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk -fPIC   -Wno-nullability-completeness -Wno-deprecated -Wall -o CMakeFiles/glfw.dir/null_joystick.c.o -c /Users/benedikt/Documents/opengl-modern/lib/glfw/src/null_joystick.c",
+  "file": "/Users/benedikt/Documents/opengl-modern/lib/glfw/src/null_joystick.c",
+  "output": "lib/glfw/src/CMakeFiles/glfw.dir/null_joystick.c.o"
+},
+{
+  "directory": "/Users/benedikt/Documents/opengl-modern/build/lib/glfw/src",
+  "command": "/usr/bin/clang -DASSET_PATH=\\\"/Users/benedikt/Documents/opengl-modern/assets\\\" -DSHADER_PATH=\\\"/Users/benedikt/Documents/opengl-modern/shader\\\" -D_CRT_SECURE_NO_WARNINGS -D_GLFW_COCOA -I/Users/benedikt/Documents/opengl-modern/lib/glfw/include -I/Users/benedikt/Documents/opengl-modern/lib/glfw/src -I/Users/benedikt/Documents/opengl-modern/build/lib/glfw/src -g -std=c99 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk -fPIC   -Wno-nullability-completeness -Wno-deprecated -Wall -o CMakeFiles/glfw.dir/cocoa_time.c.o -c /Users/benedikt/Documents/opengl-modern/lib/glfw/src/cocoa_time.c",
+  "file": "/Users/benedikt/Documents/opengl-modern/lib/glfw/src/cocoa_time.c",
+  "output": "lib/glfw/src/CMakeFiles/glfw.dir/cocoa_time.c.o"
+},
+{
+  "directory": "/Users/benedikt/Documents/opengl-modern/build/lib/glfw/src",
+  "command": "/usr/bin/clang -DASSET_PATH=\\\"/Users/benedikt/Documents/opengl-modern/assets\\\" -DSHADER_PATH=\\\"/Users/benedikt/Documents/opengl-modern/shader\\\" -D_CRT_SECURE_NO_WARNINGS -D_GLFW_COCOA -I/Users/benedikt/Documents/opengl-modern/lib/glfw/include -I/Users/benedikt/Documents/opengl-modern/lib/glfw/src -I/Users/benedikt/Documents/opengl-modern/build/lib/glfw/src -g -std=c99 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk -fPIC   -Wno-nullability-completeness -Wno-deprecated -Wall -o CMakeFiles/glfw.dir/posix_module.c.o -c /Users/benedikt/Documents/opengl-modern/lib/glfw/src/posix_module.c",
+  "file": "/Users/benedikt/Documents/opengl-modern/lib/glfw/src/posix_module.c",
+  "output": "lib/glfw/src/CMakeFiles/glfw.dir/posix_module.c.o"
+},
+{
+  "directory": "/Users/benedikt/Documents/opengl-modern/build/lib/glfw/src",
+  "command": "/usr/bin/clang -DASSET_PATH=\\\"/Users/benedikt/Documents/opengl-modern/assets\\\" -DSHADER_PATH=\\\"/Users/benedikt/Documents/opengl-modern/shader\\\" -D_CRT_SECURE_NO_WARNINGS -D_GLFW_COCOA -I/Users/benedikt/Documents/opengl-modern/lib/glfw/include -I/Users/benedikt/Documents/opengl-modern/lib/glfw/src -I/Users/benedikt/Documents/opengl-modern/build/lib/glfw/src -g -std=c99 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk -fPIC   -Wno-nullability-completeness -Wno-deprecated -Wall -o CMakeFiles/glfw.dir/posix_thread.c.o -c /Users/benedikt/Documents/opengl-modern/lib/glfw/src/posix_thread.c",
+  "file": "/Users/benedikt/Documents/opengl-modern/lib/glfw/src/posix_thread.c",
+  "output": "lib/glfw/src/CMakeFiles/glfw.dir/posix_thread.c.o"
+},
+{
+  "directory": "/Users/benedikt/Documents/opengl-modern/build/lib/glfw/src",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -DASSET_PATH=\\\"/Users/benedikt/Documents/opengl-modern/assets\\\" -DSHADER_PATH=\\\"/Users/benedikt/Documents/opengl-modern/shader\\\" -D_CRT_SECURE_NO_WARNINGS -D_GLFW_COCOA -I/Users/benedikt/Documents/opengl-modern/lib/glfw/include -I/Users/benedikt/Documents/opengl-modern/lib/glfw/src -I/Users/benedikt/Documents/opengl-modern/build/lib/glfw/src -x objective-c -g -std=c99 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk -fPIC   -Wno-nullability-completeness -Wno-deprecated -Wall -o CMakeFiles/glfw.dir/cocoa_init.m.o -c /Users/benedikt/Documents/opengl-modern/lib/glfw/src/cocoa_init.m",
+  "file": "/Users/benedikt/Documents/opengl-modern/lib/glfw/src/cocoa_init.m",
+  "output": "lib/glfw/src/CMakeFiles/glfw.dir/cocoa_init.m.o"
+},
+{
+  "directory": "/Users/benedikt/Documents/opengl-modern/build/lib/glfw/src",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -DASSET_PATH=\\\"/Users/benedikt/Documents/opengl-modern/assets\\\" -DSHADER_PATH=\\\"/Users/benedikt/Documents/opengl-modern/shader\\\" -D_CRT_SECURE_NO_WARNINGS -D_GLFW_COCOA -I/Users/benedikt/Documents/opengl-modern/lib/glfw/include -I/Users/benedikt/Documents/opengl-modern/lib/glfw/src -I/Users/benedikt/Documents/opengl-modern/build/lib/glfw/src -x objective-c -g -std=c99 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk -fPIC   -Wno-nullability-completeness -Wno-deprecated -Wall -o CMakeFiles/glfw.dir/cocoa_joystick.m.o -c /Users/benedikt/Documents/opengl-modern/lib/glfw/src/cocoa_joystick.m",
+  "file": "/Users/benedikt/Documents/opengl-modern/lib/glfw/src/cocoa_joystick.m",
+  "output": "lib/glfw/src/CMakeFiles/glfw.dir/cocoa_joystick.m.o"
+},
+{
+  "directory": "/Users/benedikt/Documents/opengl-modern/build/lib/glfw/src",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -DASSET_PATH=\\\"/Users/benedikt/Documents/opengl-modern/assets\\\" -DSHADER_PATH=\\\"/Users/benedikt/Documents/opengl-modern/shader\\\" -D_CRT_SECURE_NO_WARNINGS -D_GLFW_COCOA -I/Users/benedikt/Documents/opengl-modern/lib/glfw/include -I/Users/benedikt/Documents/opengl-modern/lib/glfw/src -I/Users/benedikt/Documents/opengl-modern/build/lib/glfw/src -x objective-c -g -std=c99 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk -fPIC   -Wno-nullability-completeness -Wno-deprecated -Wall -o CMakeFiles/glfw.dir/cocoa_monitor.m.o -c /Users/benedikt/Documents/opengl-modern/lib/glfw/src/cocoa_monitor.m",
+  "file": "/Users/benedikt/Documents/opengl-modern/lib/glfw/src/cocoa_monitor.m",
+  "output": "lib/glfw/src/CMakeFiles/glfw.dir/cocoa_monitor.m.o"
+},
+{
+  "directory": "/Users/benedikt/Documents/opengl-modern/build/lib/glfw/src",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -DASSET_PATH=\\\"/Users/benedikt/Documents/opengl-modern/assets\\\" -DSHADER_PATH=\\\"/Users/benedikt/Documents/opengl-modern/shader\\\" -D_CRT_SECURE_NO_WARNINGS -D_GLFW_COCOA -I/Users/benedikt/Documents/opengl-modern/lib/glfw/include -I/Users/benedikt/Documents/opengl-modern/lib/glfw/src -I/Users/benedikt/Documents/opengl-modern/build/lib/glfw/src -x objective-c -g -std=c99 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk -fPIC   -Wno-nullability-completeness -Wno-deprecated -Wall -o CMakeFiles/glfw.dir/cocoa_window.m.o -c /Users/benedikt/Documents/opengl-modern/lib/glfw/src/cocoa_window.m",
+  "file": "/Users/benedikt/Documents/opengl-modern/lib/glfw/src/cocoa_window.m",
+  "output": "lib/glfw/src/CMakeFiles/glfw.dir/cocoa_window.m.o"
+},
+{
+  "directory": "/Users/benedikt/Documents/opengl-modern/build/lib/glfw/src",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -DASSET_PATH=\\\"/Users/benedikt/Documents/opengl-modern/assets\\\" -DSHADER_PATH=\\\"/Users/benedikt/Documents/opengl-modern/shader\\\" -D_CRT_SECURE_NO_WARNINGS -D_GLFW_COCOA -I/Users/benedikt/Documents/opengl-modern/lib/glfw/include -I/Users/benedikt/Documents/opengl-modern/lib/glfw/src -I/Users/benedikt/Documents/opengl-modern/build/lib/glfw/src -x objective-c -g -std=c99 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk -fPIC   -Wno-nullability-completeness -Wno-deprecated -Wall -o CMakeFiles/glfw.dir/nsgl_context.m.o -c /Users/benedikt/Documents/opengl-modern/lib/glfw/src/nsgl_context.m",
+  "file": "/Users/benedikt/Documents/opengl-modern/lib/glfw/src/nsgl_context.m",
+  "output": "lib/glfw/src/CMakeFiles/glfw.dir/nsgl_context.m.o"
+},
+{
+  "directory": "/Users/benedikt/Documents/opengl-modern/build/lib/glm/glm",
+  "command": "/usr/bin/clang++ -DASSET_PATH=\\\"/Users/benedikt/Documents/opengl-modern/assets\\\" -DSHADER_PATH=\\\"/Users/benedikt/Documents/opengl-modern/shader\\\" -D_CRT_SECURE_NO_WARNINGS -I/Users/benedikt/Documents/opengl-modern/lib/glm -g -std=c++20 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk   -Wno-nullability-completeness -Wno-deprecated -Wno-c++98-compat -Wno-c++98-compat-pedantic -o CMakeFiles/glm.dir/detail/glm.cpp.o -c /Users/benedikt/Documents/opengl-modern/lib/glm/glm/detail/glm.cpp",
+  "file": "/Users/benedikt/Documents/opengl-modern/lib/glm/glm/detail/glm.cpp",
+  "output": "lib/glm/glm/CMakeFiles/glm.dir/detail/glm.cpp.o"
+},
+{
+  "directory": "/Users/benedikt/Documents/opengl-modern/build/lib/tinygltf",
+  "command": "/usr/bin/clang++ -DASSET_PATH=\\\"/Users/benedikt/Documents/opengl-modern/assets\\\" -DSHADER_PATH=\\\"/Users/benedikt/Documents/opengl-modern/shader\\\" -D_CRT_SECURE_NO_WARNINGS  -g -std=c++11 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk   -Wno-nullability-completeness -Wno-deprecated -o CMakeFiles/loader_example.dir/loader_example.cc.o -c /Users/benedikt/Documents/opengl-modern/lib/tinygltf/loader_example.cc",
+  "file": "/Users/benedikt/Documents/opengl-modern/lib/tinygltf/loader_example.cc",
+  "output": "lib/tinygltf/CMakeFiles/loader_example.dir/loader_example.cc.o"
+}
+]
