@@ -26,6 +26,8 @@ void framebuffer_size_callback(GLFWwindow* window, int width, int height)
   glViewport(0, 0, width, height);
 }
 
+// shader: read and compile shaderfile
+// -----------------------------------
 unsigned int createShader(std::string fileName, unsigned int shaderType) {
   // vertex shader
   std::ifstream shaderFile;
@@ -47,6 +49,8 @@ unsigned int createShader(std::string fileName, unsigned int shaderType) {
   return shader;
 }
 
+// shaderProgram: link list of shaders and create shaderProgram
+// -----------------------------------
 unsigned int createShaderProgram(std::vector<unsigned int> shaders) {
   unsigned int shaderProgram = glCreateProgram();
   for (auto& shader : shaders) {
