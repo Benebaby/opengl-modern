@@ -57,6 +57,9 @@ int main(int argc, char* argv[])
     std::cout << "Failed to initialize GLAD" << std::endl;
     return -1;
   }
+
+  // check OpenGL Version
+  std::cout << "OpenGL Version: " << glGetString(GL_VERSION) << std::endl;
   
   // build and compile our shader program
   // ------------------------------------
