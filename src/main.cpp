@@ -77,7 +77,7 @@ int main(int argc, char* argv[])
   if(!glfwInit())
   {
     std::cout << "GLFW Not Initialized" << std::endl;
-    return -1;
+    return -1; 
   }
   
   #ifdef __APPLE__
