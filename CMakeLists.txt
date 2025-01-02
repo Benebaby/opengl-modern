@@ -7,7 +7,6 @@ IF(APPLE)
   add_definitions(-Wno-deprecated)
 ENDIF()
 
-#add Path definitions
 add_compile_definitions(SHADER_PATH="${PROJECT_SOURCE_DIR}/shader/" ASSET_PATH="${PROJECT_SOURCE_DIR}/assets/")
 
 set(CMAKE_CXX_STANDARD 20)
@@ -18,11 +17,9 @@ ENDIF()
 
 file(GLOB SOURCES
   src/*.h
-  src/*.hpp
-  src/*.c
   src/*.cpp
   lib/glad/src/*.c
-  lib/glad/src/*.cpp
+  lib/imgui/src/*.cpp
 )
 add_executable(${CMAKE_PROJECT_NAME} ${SOURCES})
 
@@ -54,6 +51,8 @@ target_link_libraries(${CMAKE_PROJECT_NAME}
 include_directories(${CMAKE_PROJECT_NAME} PRIVATE
   ${OPENGL_INCLUDE_DIRS}
   ${PROJECT_SOURCE_DIR}/lib/glad/include
+  ${PROJECT_SOURCE_DIR}/lib/imgui/include
+  ${PROJECT_SOURCE_DIR}/lib/imgui/include/backends
   ${PROJECT_SOURCE_DIR}/lib/tinygltf
   ${PROJECT_SOURCE_DIR}/src
 )
