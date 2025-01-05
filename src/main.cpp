@@ -76,6 +76,7 @@ unsigned int createShaderProgram(std::vector<unsigned int> shaders) {
 }
 
 void renderImGui() {
+  ImGuiIO& io = ImGui::GetIO();
   // Start the Dear ImGui frame
   ImGui_ImplOpenGL3_NewFrame();
   ImGui_ImplGlfw_NewFrame();
@@ -255,8 +256,7 @@ int main(int argc, char* argv[])
     glClearColor(clear_color.x * clear_color.w, clear_color.y * clear_color.w, clear_color.z * clear_color.w, clear_color.w);
     glClear(GL_COLOR_BUFFER_BIT);
 
-    // render imgui first
-    renderImGui();
+   
 
     // draw our first triangle
     glUseProgram(shaderProgram);
@@ -264,6 +264,10 @@ int main(int argc, char* argv[])
     //glDrawArrays(GL_TRIANGLES, 0, 6);
     glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
     // glBindVertexArray(0); // no need to unbind it every time 
+    
+    // render imgui at the end (overlay)
+    // ---------------------------------
+    renderImGui();
 
     // glfw: swap buffers and poll IO events (keys pressed/released, mouse moved etc.)
     // -------------------------------------------------------------------------------
